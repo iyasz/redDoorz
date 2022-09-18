@@ -3,7 +3,6 @@
 // echo $_POST['email'];
 // echo $_SERVER['REQUEST_METHOD'];
 
-$error = [];
 
 
 // if (empty($email) or empty($password) or empty($re_password)) {
@@ -19,10 +18,9 @@ $errors = [
 if (isset($_POST['post_register'])) {
     // $_SERVER['REQUEST_METHOD'] == 'POST'
     $user = $conn->query("SELECT * FROM users WHERE email = '$_POST[email]'");
-    var_dump($user);
-    die;
 
-    //validation
+
+    //validation email
     if (empty($_POST['email']) == TRUE) {
         $errors['email'] = "Harap Mengisi Email";
     } elseif (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) == FALSE) {
@@ -31,12 +29,14 @@ if (isset($_POST['post_register'])) {
         $errors['email'] = "Email Sudah Digunakan";
     }
 
+    //validation password
     if (empty($_POST['password']) == TRUE) {
         $errors['password'] = "Harap Mengisi password";
     } elseif (strlen($_POST['password']) < 6) {
         $errors['password'] = "Harap Mengisi Lebih Dari 6 Karakter";
     }
 
+    //validation Re Password
     if (empty($_POST['re_password']) == TRUE) {
         $errors['re_password'] = "Harap Mengisi ulang password";
     } elseif ($_POST['password'] != $_POST['re_password']) {

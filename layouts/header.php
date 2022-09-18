@@ -17,15 +17,15 @@
             z-index: 3;
         }
     </style>
-    <div class=" position-fixed top-0 start-0 end-0 navbar navbar-expand-lg text-white bg-transparent shadow-sm">
+    <div class=" position-absolute top-0 start-0 end-0 navbar navbar-expand-lg text-white bg-transparent shadow-sm">
         <div class="container ">
-            <a class="navbar-brand" href="index.php?page=home"><img class="img-fluid" src="assets/img/logo/reddoorz.png" width="150px" alt=""></a>
+            <a class="navbar-brand" href="index.php?page=home"><img class="img-fluid" src="assets/img/logo/reddoorz.png" width="135px" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link" href="index.php?page=register">Gabung | Daftar</a>
+                    <a class="nav-link rounded-pill fw-600 px-4 text-white py-2" href="index.php?page=register">Gabung | Daftar</a>
                 </div>
             </div>
         </div>
