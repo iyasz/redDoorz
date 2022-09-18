@@ -72,12 +72,12 @@ if (isset($_POST['post_register'])) {
                             <div class="invalid-feedback"><?= $errors['email'] ?? ''; ?></div>
                         </div>
                         <div class="h-a">
-                            <label for="pw" class="form-label ">Password</label>
+                            <label for="pw" class="">Password</label>
                             <input type="password" id="pw" name="password" class="form-control <?= isset($errors['password']) ? 'is-invalid' : '' ?>">
                             <div class="invalid-feedback"><?= $errors['password'] ?? ''; ?></div>
                         </div>
                         <div class="h-a">
-                            <label for="pww" class="form-label ">Confirm Password</label>
+                            <label for="pww" class="">Confirm Password</label>
                             <input type="password" id="pww" name="re_password" class="form-control <?= isset($errors['re_password']) ? 'is-invalid' : '' ?>">
                             <div class="invalid-feedback"><?= $errors['re_password'] ?? ''; ?></div>
                         </div>
