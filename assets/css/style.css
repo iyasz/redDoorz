@@ -45,7 +45,7 @@ body {
 .form-control {
   border-radius: 2px;
 }
-.form-control:focus {
+.form-control:focus, .form-control.is-invalid:focus{
   box-shadow: none;
 }
 .shadow-sm {
@@ -68,5 +68,10 @@ body {
 .nav-link {
   background: #ffffff5c;
   font-size: 14px;
-  
+}
+.h-a {
+  height: 90px;
+}
+.invalid-feedback {
+  font-size: 12px;
 }

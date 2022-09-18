@@ -50,6 +50,7 @@ if (isset($_POST['post_register'])) {
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
         $simpan = mysqli_query($conn, "INSERT INTO users (email,password) VALUES('$email', '$password')");
+        echo "<script>location.replace('index.php?page=login');</script>";
     }
 }
 
@@ -65,17 +66,17 @@ if (isset($_POST['post_register'])) {
                 <div class="card-body">
                     <h5 class="fw-600 mb-4">Gabung Jadi Member Travelokapala !</h5>
                     <form action="" method="post">
-                        <div class="mb-3">
+                        <div class="h-a">
                             <label for="email" class="">Email</label>
                             <input type="text" id="email" class="form-control <?= isset($errors['email']) ? 'is-invalid' : '' ?>" name="email" autocomplete="off" placeholder="example@gmail.com">
                             <div class="invalid-feedback"><?= $errors['email'] ?? ''; ?></div>
                         </div>
-                        <div class="mb-3">
+                        <div class="h-a">
                             <label for="pw" class="form-label ">Password</label>
                             <input type="password" id="pw" name="password" class="form-control <?= isset($errors['password']) ? 'is-invalid' : '' ?>">
                             <div class="invalid-feedback"><?= $errors['password'] ?? ''; ?></div>
                         </div>
-                        <div class="mb-3">
+                        <div class="h-a">
                             <label for="pww" class="form-label ">Confirm Password</label>
                             <input type="password" id="pww" name="re_password" class="form-control <?= isset($errors['re_password']) ? 'is-invalid' : '' ?>">
                             <div class="invalid-feedback"><?= $errors['re_password'] ?? ''; ?></div>
